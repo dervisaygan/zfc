@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Derviş Aygan</title>
+    <style>
+        button {
+            padding: 20px;
+            font-size: 18px;
+            margin-right: 20px;
+            cursor: pointer;
+        }
+        .zfc{
+            background-color: green;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button>Ürün 1 (<span class="item">0</span>)</button>
+    <button>Ürün 2 (<span class="item">0</span>)</button>
+    <button>Ürün 3 (<span class="item">0</span>)</button>
+    <button>Ürün 4 (<span class="item">0</span>)</button>
+    <button>Ürün 5 (<span class="item">0</span>)</button>
+
+
+    <script>
+
+
+document.querySelectorAll('button').forEach(es => {
+    es.addEventListener('click',()=>{
+        es.querySelector('span.item').textContent= String(Number(es.querySelector('span.item').textContent) +1)
+        var item = es;
+        document.querySelectorAll('button').forEach(el => {
+            el.classList.remove('zfc')
+            if (Number(item.querySelector('span.item').textContent) < Number(el.querySelector('span.item').textContent)) {
+                item= el;
+            }
+        });
+        item.classList.add('zfc')
+    })
+});
+
+
+    </script>
+</body>
+
+</html>
