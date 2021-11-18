@@ -1,53 +1,35 @@
-<!DOCTYPE html>
-<html lang="tr">
 
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Derviş Aygan</title>
+    <title>ZFC EKLENTİ POLİTİKA</title>
     <style>
-        button {
-            padding: 20px;
-            font-size: 18px;
-            margin-right: 20px;
-            cursor: pointer;
+
+        .center{
+            text-align: center;
         }
-        .zfc{
-            background-color: green;
-            color: #fff;
+        .body{
+            padding: 30px;
+            max-width: 800px;
+            font-size: 20px;
         }
     </style>
 </head>
-
 <body>
-
-    <button>Ürün 1 (<span class="item">0</span>)</button>
-    <button>Ürün 2 (<span class="item">0</span>)</button>
-    <button>Ürün 3 (<span class="item">0</span>)</button>
-    <button>Ürün 4 (<span class="item">0</span>)</button>
-    <button>Ürün 5 (<span class="item">0</span>)</button>
-
-
-    <script>
-
-
-document.querySelectorAll('button').forEach(es => {
-    es.addEventListener('click',()=>{
-        es.querySelector('span.item').textContent= String(Number(es.querySelector('span.item').textContent) +1)
-        var item = es;
-        document.querySelectorAll('button').forEach(el => {
-            el.classList.remove('zfc')
-            if (Number(item.querySelector('span.item').textContent) < Number(el.querySelector('span.item').textContent)) {
-                item= el;
-            }
-        });
-        item.classList.add('zfc')
-    })
-});
-
-
-    </script>
+    <center>
+        <div class="body">
+    <h1 class="center">Gizlilik Politikası</h1>
+    <p>Bu eklenti hiçbir kişisel veya hassas bilgilerinizi işlemez. Ayrıca gelecek güncellemelerde de hassas bilgilerinizi işlemeyeceğimizin güvencesini veriyoruz. Bu eklenti bir api aracılığı ile ZFC Akademi’nin son 10 içeriğini istediğiniz sitede okuyabilme olanağı sağlar. Herhangi bir kayıt veya bilgi girişi gerekmemektedir. </p>
+    <h1 class="center">Sorumluluk Reddi</h1>
+    <p>Bu eklenti hiçbir hassas verinizi işlemediğinden karşılaştığınız hiçbir olumsuz olaydan sorumlu değildir. Eklenti herkesin kullanabileceği rss apisini kullanarak ilgili sitenin son 10 içeriğini okumanızı sağlamaktadır. IP adresi de dahil olmak üzere hiçbir kişisel bilginiz bizim tarafımıza ulaşmamaktadır. Kullanılan apiler güvenlik amacı ile bazı bilgilerinizi kaydedebilir. Ancak bu bilgiler sadece sınırlamalar koymak ve ürün mağduriyeti yaşamamak içindir.</p>
+    <h1 class="center">Çerez Politikası</h1>
+    <p>
+        Bu eklenti özel olarak hiçbir çerez tutmaz. Gelecek güncellemelerde de böyle bir amacı olmayacaktır. Eklenti kullandığı rss apisi sebebiyle sizin ip adresiniz gibi bazı bilgileri apiye sunmaktadır. Bunun sebebi api hizmetini veren firmanın koyduğu sınırlamanın geçerli olabilmesidir. IP adresi gibi bilgileriniz sadece 3. Taraf apiler tarafından güvenlik amacı ile kullanılmaktadır. Eklenti bünyesinde veri toplayan herhangi bir sistem bulunmamaktadır.
+    </p>
+</div>
+</center>
 </body>
-
 </html>
